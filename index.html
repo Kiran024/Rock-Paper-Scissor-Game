@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" class="rel">
+    <title>Cuvette Task</title>
+</head>
+<body>
+    <div class="main">
+        <div class="score">
+            <div class="game-rock-title">ROCK</div><br>
+            <div class="game-paper-title">PAPER</div><br>
+            <div class="game-scissors-title">SCISSORS</div>
+            <div class="c-score">
+                <div class="c-score-title">COMPUTER</div>
+                <div class="cs-score-title">SCORE</div>
+                <div id="cs_score" class="cs_score">0</div>
+            </div>
+            <div class="y-score">
+                <div class="y-score-title">YOUR</div>
+                <div class="ys-score-title">SCORE</div>
+                <div id="ys_score" class="ys_score">0</div>
+            </div>
+        </div>
+        <div id="game-area" class="game-area">
+            <img onclick="play('rock')" class="rock_circle" src="images/rock.png" >
+            <img class="line1" src="images/Line 1.svg" alt="">
+            <img onclick="play('scissors')" class="scissors_circle" src="images/scissor.png">
+            <img class="line2" src="images/Line 2.svg" alt="">
+            <img onclick="play('paper')" class="paper_circle" src="images/Paper.png">
+            <img class="line3" src="images/Line 3.svg" alt="">
+        </div>
+        
+        <div id="win-area" >
+            <div class="user_result">YOU PICKED</div>
+            <img id="win-circle" src="images/win-circle.png" >
+               <img id="user-rock-win" src="images/rock.png"  >
+               <img id="user-paper-win" src="images/Paper.png"  >
+               <img id="user-scissor-win" src="images/scissor.png"  >
+            <div class="cpu_result"> PC PICKED</div>
+            <img id="cpu-rock-win" src="images/rock.png" >
+            <img id="cpu-paper-win" src="images/Paper.png" >
+            <img id="cpu-scissor-win" src="images/scissor.png" >
+            <div class="title-won">YOU WIN</div>
+            <div class="title-against">AGAINST PC</div>
+            <button id="play-again-button" onclick="gamepage()">PLAY AGAIN</button>
+        </div>
+        <div id="lost-area">
+            <div class="user_result">YOU PICKED</div>
+            <img id="lost-circle" src="images/win-circle.png">
+               <img id="user-rock-lost" src="images/rock.png" >
+               <img id="user-paper-lost" src="images/Paper.png" >
+               <img id="user-scissor-lost" src="images/scissor.png" >
+            <div class="cpu_result"> PC PICKED</div>
+            <img id="cpu-rock-lost" src="images/rock.png" >
+            <img id="cpu-paper-lost" src="images/Paper.png" >
+            <img id="cpu-scissor-lost" src="images/scissor.png" >
+            <div class="title-won">YOU LOST</div>
+            <div class="title-against">AGAINST PC</div>
+            <button id="play-again-button" onclick="gamepage()">PLAY AGAIN</button>
+        </div>
+        <div id="tie-area">
+            <div class="user_result">YOU PICKED</div>
+               <img id="user-rock-tie" src="images/rock.png" >
+               <img id="user-paper-tie" src="images/Paper.png" >
+               <img id="user-scissor-tie" src="images/scissor.png" >
+            <div class="cpu_result"> PC PICKED</div>
+            <img id="cpu-rock-tie" src="images/rock.png" >
+            <img id="cpu-paper-tie" src="images/Paper.png" >
+            <img id="cpu-scissor-tie" src="images/scissor.png" >
+            <div class="title-won">TIE UP</div>
+            <button id="play-again-button" onclick="gamepage()">REPLAY</button>
+        </div>
+        <button id="rules-button">RULES</button>
+        <div id="rules-popup">
+            <img class="Game_Rules" src="images/Game_rules.svg" alt="">
+            <span class="close-button">&times;</span>
+        </div>
+        <button id="next-button" onclick="opennewpage()">NEXT</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
